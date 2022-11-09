@@ -11,10 +11,10 @@ provider "helm" {
 }
 
 resource "helm_release" "nginx_ingress" {
-  name       = "nginx-ingress-controller"
+  name       = "nginx"
   namespace  = "default"
   repository = "https://charts.bitnami.com/bitnami"
-  chart      = "nginx-ingress-controller"
+  chart      = "nginx"
 
   set {
     name  = "service.type"
